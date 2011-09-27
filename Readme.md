@@ -1,8 +1,8 @@
-# GeniusCode.Templating.Razor #
+# GeniusCode Razor Templating #
 
 ### Bye, Bye T4 -- Hello Razor.###
 
-## Powerful toolset for generating files using Razor (.cshtml) for Templating - outside ASP.NET. ##
+## Powerful toolset for generating files using Razor Templates (.cshtml) - outside ASP.NET. ##
 
 * Supports Razor as C# 'Script Language'
 * Supports Multiple File Outputs
@@ -22,12 +22,12 @@ API provides you strongly-typed models. Console version provides Expando object 
 
 **Console Usage Examples:**
 
-> Generates Start.g.cs :
+Generates 'Start.g.cs' :
 
     RazorConsole --tbase "$(ProjectDir)\Templates\Entities" --obase "$(ProjectDir)\Output\Entities"
         -f Start.cshtml -o Start.g.cs
 
-> Generates Only Child Files, no Parent output (notice suspendRootOutput). Supports loading 3rd party assemblies :
+Generates only Child Files, no Parent output (notice suspendRootOutput). Supports loading 3rd party assemblies :
 
     RazorConsole --tbase "$(ProjectDir)\Templates\Entities" --obase "$(ProjectDir)\Output\Entities"
         --assemblyFolder "$(ProjectDir)\bin" --suspendRootOutput true -f Start.cshtml -o noFile
