@@ -1,4 +1,4 @@
-# GeniusCode Razor Templating #
+# GeniusCode - Razor Templating #
 
 ### Bye, Bye T4 -- Hello Razor.###
 
