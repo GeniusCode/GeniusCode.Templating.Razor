@@ -55,32 +55,32 @@
         //    return templateType;
         //}
 
-        /// <summary>
-        /// Creates an instance of <see cref="ITemplate"/> from the specified template.
-        /// </summary>
-        /// <param name="template">The template to compile.</param>
-        /// <param name="modelType">The model type.</param>
-        /// <returns>An instance of <see cref="ITemplate"/>.</returns>
-        internal ITemplate CreateTemplate(string template, Type modelType)
-        {
-            // Modified by Ryan (but commented back out, not needed)
-            var baseType = templateType; //GetRazorBaseTypeForFile(template);
+        ///// <summary>
+        ///// Creates an instance of <see cref="ITemplate"/> from the specified template.
+        ///// </summary>
+        ///// <param name="template">The template to compile.</param>
+        ///// <param name="modelType">The model type.</param>
+        ///// <returns>An instance of <see cref="ITemplate"/>.</returns>
+        //internal ITemplate CreateTemplate(string template, Type modelType)
+        //{
+        //    // Modified by Ryan (but commented back out, not needed)
+        //    var baseType = templateType; //GetRazorBaseTypeForFile(template);
 
-            var context = new TypeContext
-            {
-                TemplateType = baseType,
-                TemplateContent = template,
-                ModelType = modelType
-            };
+        //    var context = new TypeContext
+        //    {
+        //        TemplateType = baseType,
+        //        TemplateContent = template,
+        //        ModelType = modelType
+        //    };
 
-            foreach (string @namespace in Namespaces)
-                context.Namespaces.Add(@namespace);
+        //    foreach (string @namespace in Namespaces)
+        //        context.Namespaces.Add(@namespace);
 
-            Type instanceType = compilerService.CompileType(context);
-            var instance = activator.CreateInstance(instanceType);
+        //    Type instanceType = compilerService.CompileType(context);
+        //    var instance = activator.CreateInstance(instanceType);
 
-            return instance;
-        }
+        //    return instance;
+        //}
 
     }
 
