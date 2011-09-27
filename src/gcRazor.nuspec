@@ -1,9 +1,9 @@
 <?xml version="1.0"?>
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata>
-    <id>gcFactories</id>
+    <id>gcRazor</id>
     <version>1.0</version>
-    <title>DI Factories</title>
+    <title>GeniusCode.Templating.Razor</title>
     <authors>JeremiahRedekop,Ryan D Hatch</authors>
     <owners>GeniusCode,LLC</owners>
     <projectUrl>https://github.com/GeniusCode/GeniusCode.Templating.Razor</projectUrl>
