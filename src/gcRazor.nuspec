@@ -17,6 +17,8 @@
   </metadata>
   <files>
     <file src="src\gcRazor\RazorConsole\bin\Release\RazorEngineExtensions.dll" target="lib\net35" />
+	<file src="src\gcRazor\RazorConsole\bin\Release\RazorEngine.dll" target="lib\net35" />
+	<file src="src\gcRazor\RazorConsole\bin\Release\RazorEngineExtensions.dll" target="lib\net40" />
 	<file src="src\gcRazor\RazorConsole\bin\Release\RazorEngine.dll" target="lib\net40" />
 	<file src="src\gcRazor\RazorConsole\bin\Release\RazorConsole.exe" target="tools\RazorConsole" />
 	<file src="src\gcRazor\RazorConsole\bin\Release\*.dll" target="tools\RazorConsole" />
