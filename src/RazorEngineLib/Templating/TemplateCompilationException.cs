@@ -23,6 +23,21 @@
         }
         #endregion
 
+        public override string Message
+        {
+            get
+            {
+                string message = string.Empty;
+
+                Errors.ToList().ForEach(error =>
+                    {
+                        message += error + "\n";
+                    });
+
+                return message;
+            }
+        }
+
         #region Properties
         /// <summary>
         /// Gets the collection of compiler errors.

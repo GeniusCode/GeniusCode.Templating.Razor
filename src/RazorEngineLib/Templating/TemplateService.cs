@@ -9,7 +9,7 @@
     /// <summary>
     /// Defines a templating service.
     /// </summary>
-    public class TemplateService
+    public partial class TemplateService
     {
         #region Fields
         private IActivator activator;

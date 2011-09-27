@@ -11,7 +11,7 @@
     /// <summary>
     /// Provides quick access to template services.
     /// </summary>
-    public static class Razor
+    public static partial class Razor
     {
         #region Constructor
         /// <summary>

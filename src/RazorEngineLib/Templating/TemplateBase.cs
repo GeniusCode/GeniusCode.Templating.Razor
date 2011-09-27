@@ -1,6 +1,7 @@
-﻿namespace RazorEngine.Templating
+﻿using System;
+
+namespace RazorEngine.Templating
 {
-    using System;
     using System.IO;
     using System.Text;
 
@@ -9,19 +10,21 @@
     /// </summary>
     public abstract class TemplateBase : ITemplate
     {
-        #region Fields
-        [ThreadStatic]
-        private static StringBuilder builder;
+        #region Constructor
+        /// <summary>
+        /// Initialises a new instance of <see cref="TemplateBase"/>.
+        /// </summary>
+        protected TemplateBase()
+        {
+            Builder = new StringBuilder();
+        }
         #endregion
 
         #region Properties
         /// <summary>
         /// Gets the string builder used to output the template result.
         /// </summary>
-        public StringBuilder Builder
-        {
-            get { return builder ?? (builder = new StringBuilder()); }
-        }
+        public StringBuilder Builder { get; private set; }
 
         /// <summary>
         /// Gets the last result of the template.
