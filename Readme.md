@@ -18,7 +18,7 @@ We use this extensively to generate entities, partial classes, class libraries, 
 
 You can generate Parent/Children files n-levels deep.  You have full control over naming of files and directories that are generated.
 
-API provides you strongly-typed models. Console version provides Expando object for key/value pairs on a dynamic model.
+API provides you strongly-typed models. Console version provides Expando object for key/value pairs on a dynamic model.  We often use the Console (with a 'Start.cshtml') to kick-start other strongly-typed child templates.
 
 **Console Usage Examples:**
 
