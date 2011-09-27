@@ -65,7 +65,7 @@ This generates 3 child files: 'Child.1.out', 'Child.2.out', 'Child.3.out' into d
     	{
             var childOutputName = String.Format(@"{0}\Child.{1}.out", childFolder, i);
 
-            dynamic childModel = new System.Dynamic.ExpandoObject();
+            dynamic childModel = new ExpandoObject();
             childModel.someValue = "Hello Child, this is your Parent speaking";
 
             // Able to output to separate files and folders
