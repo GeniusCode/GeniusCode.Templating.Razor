@@ -14,7 +14,7 @@
 
 **Purposes:**
 
-We use this extensively to generate entities, partial classes, calculation dependencies, and even create & compile new assemblies.  Most of our usage runs via the Console as Pre-Build Events.
+We use this extensively to generate entities, partial classes, class libraries, calculation dependencies, and even create & compile new assemblies.  Most of our usage runs via the Console as Pre-Build Events.
 
 You can generate Parent/Children files n-levels deep.  You have full control over naming of files and directories that are generated.
 
