@@ -4,7 +4,9 @@ GeniusCode.Templating.Razor
 Powerful toolset for generating files using Razor (.cshtml) templates - outside ASP.NET.
 -------------
 
-* Completely Replaces T4 Templates
+Completely Replaces T4 Templates
+-------------
+
 * Supports Razor as C# 'Script Language'
 * Supports Multiple File Outputs
 * Supports ExistingFileBehavior (AlwaysOverwrite | NeverOverwrite)
