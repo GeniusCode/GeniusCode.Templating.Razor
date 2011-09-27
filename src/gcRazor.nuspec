@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>gcFactories</id>
+    <version>1.0</version>
+    <title>DI Factories</title>
+    <authors>JeremiahRedekop,Ryan D Hatch</authors>
+    <owners>GeniusCode,LLC</owners>
+    <projectUrl>https://github.com/GeniusCode/GeniusCode.Templating.Razor</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Generate any text / .cs files using C# Razor, with full Intellisense support.  Includes .NET API and Console app for Build Event support.</description>
+    <summary>Razor Generator</summary>
+    <tags>Razor</tags>
+	<dependencies>
+      <dependency id="gcConsole" version="1.0.15" />
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="src\gcRazor\RazorConsole\bin\Release\RazorEngineExtensions.dll" target="lib\net35" />
+	<file src="src\gcRazor\RazorConsole\bin\Release\RazorEngine.dll" target="lib\net40" />
+	<file src="src\gcRazor\RazorConsole\bin\Release\RazorConsole.exe" target="tools\RazorConsole" />
+	<file src="src\gcRazor\RazorConsole\bin\Release\*.dll" target="tools\RazorConsole" />
+	<file src="src\gcRazor\RazorConsole\bin\Release\RazorConsole.exe.config" target="tools\RazorConsole" />
+  </files>
+</package>
