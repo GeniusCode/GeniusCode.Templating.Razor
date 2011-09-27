@@ -1,0 +1,11 @@
+﻿@inherits FileSystemTemplateBase<ExistingFileBehaviorModel>
+@using RazorEngineExtensions;
+@using RazorFileTestModels
+
+@{
+    dynamic childModel = new System.Dynamic.ExpandoObject();
+    childModel.Number = Model.ChildNumber;
+    
+    // Able to output to separate files
+    ChildTemplate("Child.cshtml", childModel, "FileExistsChild.out", Model.Behavior);
+}

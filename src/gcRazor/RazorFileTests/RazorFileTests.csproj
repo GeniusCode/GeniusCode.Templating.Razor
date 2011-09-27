@@ -1,0 +1,149 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{23224F80-A9EF-4C00-8717-5C1B3E8AB46C}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>RazorFileTests</RootNamespace>
+    <AssemblyName>RazorFileTests</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{3AC096D0-A1C2-E12C-1390-A8335801FDAB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="nunit.framework, Version=2.5.10.11092, Culture=neutral, PublicKeyToken=96d09a1eb7f44a77, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\NUnit.2.5.10.11092\lib\nunit.framework.dll</HintPath>
+    </Reference>
+    <Reference Include="nunit.mocks, Version=2.5.10.11092, Culture=neutral, PublicKeyToken=96d09a1eb7f44a77, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\NUnit.2.5.10.11092\lib\nunit.mocks.dll</HintPath>
+    </Reference>
+    <Reference Include="pnunit.framework">
+      <HintPath>..\..\packages\NUnit.2.5.10.11092\lib\pnunit.framework.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Mvc, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="System.Web.Razor, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Prerequisites\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+  </ItemGroup>
+  <ItemGroup>
+    <CodeAnalysisDependentAssemblyPaths Condition=" '$(VS100COMNTOOLS)' != '' " Include="$(VS100COMNTOOLS)..\IDE\PrivateAssemblies">
+      <Visible>False</Visible>
+    </CodeAnalysisDependentAssemblyPaths>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ConsoleTest.cs" />
+    <Compile Include="FileExistsTests.cs" />
+    <Compile Include="ParentChildTests.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RazorExtensionsTest.cs" />
+    <Compile Include="Support\ParentChildTestBase.cs" />
+    <Compile Include="Support\TestHelper.cs" />
+    <Compile Include="ThirdPartyAssemblyTest.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="..\..\packages\SharpZipLib.0.86.0\lib\20\ICSharpCode.SharpZipLib.dll">
+      <Link>TemplateAssemblies\ICSharpCode.SharpZipLib.dll</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\RazorFileTestsMVC\Templates\Child.cshtml">
+      <Link>Templates\Child.cshtml</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\RazorFileTestsMVC\Templates\FileExistsParent.cshtml">
+      <Link>Templates\FileExistsParent.cshtml</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\RazorFileTestsMVC\Templates\Parent.cshtml">
+      <Link>Templates\Parent.cshtml</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\RazorFileTestsMVC\Templates\SimpleWithModel.cshtml">
+      <Link>Templates\SimpleWithModel.cshtml</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\RazorFileTestsMVC\Templates\SimpleWithoutModel.cshtml">
+      <Link>Templates\SimpleWithoutModel.cshtml</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\RazorFileTestsMVC\Templates\ThirdPartyAssembly.cshtml">
+      <Link>Templates\ThirdPartyAssembly.cshtml</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\RazorFileTestsMVC\Templates\TypeTemplate.cshtml">
+      <Link>Templates\TypeTemplate.cshtml</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\RazorEngineLib\RazorEngine.csproj">
+      <Project>{64128C85-B9AF-4B4C-BE83-04983EF7F8C9}</Project>
+      <Name>RazorEngine %28RazorEngine\RazorEngine%29</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\RazorConsole\RazorConsole.csproj">
+      <Project>{75FA5DC2-BE93-42B5-80BE-CD91FF825D57}</Project>
+      <Name>RazorConsole</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\RazorEngineExtensions\RazorEngineExtensions.csproj">
+      <Project>{47720328-A656-4926-B1BA-0D813023C36E}</Project>
+      <Name>RazorEngineExtensions</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\RazorFileTestModels\RazorFileTestModels.csproj">
+      <Project>{374EAF80-D076-4F93-8D02-E0A3C01175D7}</Project>
+      <Name>RazorFileTestModels</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\RazorFileTestsMVC\RazorFileTestsMVC.csproj">
+      <Project>{D7A50509-55FA-42E8-8613-D1E3DF68774E}</Project>
+      <Name>RazorFileTestsMVC</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

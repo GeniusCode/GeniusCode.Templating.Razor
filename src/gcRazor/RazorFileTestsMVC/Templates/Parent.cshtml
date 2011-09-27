@@ -1,0 +1,32 @@
+﻿@inherits RazorEngine.Templating.DictionaryTemplateBase<dynamic>
+              
+This is Parent output
+
+Model used to be of type <ParentModel> <- Can't use strongly typed models when executed from Console, since we pass in an Expando
+
+
+@{
+	var collection = new List<int>() { 1, 2, 3 };
+
+	foreach (var i in collection)
+	{
+		var childTemplateName = @"Child.cshtml";
+
+        dynamic childModel = new System.Dynamic.ExpandoObject();
+        childModel.Number = i;
+
+        var childFolder = Model.ChildFolderName;
+        var childOutputName = String.Format(@"{0}\Child{1}.out", childFolder, i);
+
+        // Able to output to separate files
+        ChildTemplate(childTemplateName, childModel, childOutputName);
+                
+        // Able to append other .cshtml files to myself
+        PartialTemplate(childTemplateName, childModel);
+	}
+	
+}
+
+@*@section test {
+ this is a test
+}*@
