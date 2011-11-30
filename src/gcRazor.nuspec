@@ -4,7 +4,7 @@
     <id>gcRazor</id>
     <version>1.0</version>
     <title>GeniusCode.Templating.Razor</title>
-    <authors>JeremiahRedekop,Ryan D Hatch</authors>
+    <authors>GeniusCode</authors>
     <owners>GeniusCode,LLC</owners>
     <projectUrl>https://github.com/GeniusCode/GeniusCode.Templating.Razor</projectUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
